@@ -12,6 +12,12 @@
 */
 
 /*si cambiamos la ruta, pues oviamente  esta ya no seria: http://localhost/cursoMaster/api-rest-laravel/public/*/
+
 Route::get('/', function () {
+    return "<h1> hola mundo <h1>";
+});
+
+
+Route::get('/welcome', function () {
     return view('welcome');
 });
