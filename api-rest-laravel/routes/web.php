@@ -21,3 +21,14 @@ Route::get('/', function () {
 Route::get('/welcome', function () {
     return view('welcome');
 });
+
+Route::get('/pruebas/{nombre?}', function ($nombre = null) {
+    $texto = "<h2>mostrando texto desde una ruta</h2>";
+    $texto .= "nombre: ".$nombre;
+
+    return view('pruebas',array(
+        'texto' => $texto
+    ));
+});
+
+Route::get('/animales', 'PruebasController@index');
